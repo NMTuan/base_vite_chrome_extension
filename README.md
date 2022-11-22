@@ -1,0 +1,1 @@
+# base_vite_chrome_extension
