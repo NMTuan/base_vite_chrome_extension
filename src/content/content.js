@@ -2,44 +2,36 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2022-11-22 11:23:06
- * @LastEditTime: 2022-11-22 17:12:23
+ * @LastEditTime: 2022-11-24 17:05:24
  * @LastEditors: NMTuan
  * @Description:
- * @FilePath: \test_crxjs\src\content\content.js
+ * @FilePath: \base_vite_chrome_extension\src\content\content.js
  */
-console.log('[content-scripts]')
 
 import { createApp } from 'vue'
 import App from './Content.vue'
-// import 'uno.css'
+import cssString from './style.css' // tailwindcss 可以直接拿到完整 style 方便插入页面，所以这里没有用 unocss。
 
-import cssString from './style.css'
+const id = Math.floor(Math.random() * 100000)
+
+// 创建 app dom
+const appEl = document.createElement(`ext-app-${id}`)
+appEl.setAttribute('id', `ext-app-${id}`)
+const shadowDom = appEl.attachShadow({ mode: 'closed' })
+
+// 插入样式
 const style = document.createElement('style')
 style.textContent = cssString
-document.head.append(style)
+shadowDom.appendChild(style)
+console.log('style', style);
 
-const MOUNT_EL_ID = 'ezBookmarks2'
+// 插入挂载点
+const mountEl = document.createElement('div')
+mountEl.setAttribute('id', 'app')
+shadowDom.appendChild(mountEl)
 
-let mountEl = document.getElementById(MOUNT_EL_ID)
-if (mountEl) {
-    mountEl.innerHTML = ''
-}
-mountEl = document.createElement('ez-bookmark')
-mountEl.setAttribute('id', MOUNT_EL_ID)
-// mountEl.innerHTML = '<div>123</div>'
-const shadowDom = mountEl //.attachShadow({ mode: 'closed' })
-document.body.appendChild(mountEl)
+// 挂载 vue
+createApp(App).mount(mountEl)
 
-createApp(App).mount(shadowDom)
-
-//
-const src = chrome.runtime.getURL('pages/test.html')
-
-const iframe = new DOMParser().parseFromString(
-    `<iframe class="crx" src="${src}"></iframe>`,
-    'text/html'
-).body.firstElementChild
-
-console.log('x', iframe)
-mountEl.append(iframe)
-document.body.append(iframe)
+// 插入页面
+document.body.append(appEl)
