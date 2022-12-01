@@ -2,10 +2,10 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2022-11-22 10:18:29
- * @LastEditTime: 2022-11-22 14:35:08
+ * @LastEditTime: 2022-12-01 16:00:57
  * @LastEditors: NMTuan
  * @Description: 
- * @FilePath: \test_crxjs\src\popup\Popup.vue
+ * @FilePath: \base_vite_chrome_extension\src\popup\Popup.vue
 -->
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
@@ -25,7 +25,9 @@ import HelloWorld from '../components/HelloWorld.vue'
   <HelloWorld msg="Hello world" />
 </template>
 
-<style scoped>
+<style >
+@unocss-placeholder html {}
+
 .logo {
   height: 6em;
   padding: 1.5em;
