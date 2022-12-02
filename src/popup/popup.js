@@ -10,6 +10,6 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './Popup.vue'
-// import 'uno.css'
+import 'uno.css'
 
 createApp(App).mount('#app')

@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2022-11-22 11:07:04
- * @LastEditTime: 2022-12-01 15:57:51
+ * @LastEditTime: 2022-12-02 11:42:00
  * @LastEditors: NMTuan
  * @Description: 
  * @FilePath: \base_vite_chrome_extension\src\options\App.vue
@@ -17,8 +17,3 @@
         </div>
     </div>
 </template>
-<style>
-@unocss-placeholder
-</style>
-
-

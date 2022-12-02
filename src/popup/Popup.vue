@@ -2,7 +2,7 @@
  * @Author: NMTuan
  * @Email: NMTuan@qq.com
  * @Date: 2022-11-22 10:18:29
- * @LastEditTime: 2022-12-01 16:00:57
+ * @LastEditTime: 2022-12-02 11:41:31
  * @LastEditors: NMTuan
  * @Description: 
  * @FilePath: \base_vite_chrome_extension\src\popup\Popup.vue
@@ -26,8 +26,6 @@ import HelloWorld from '../components/HelloWorld.vue'
 </template>
 
 <style >
-@unocss-placeholder html {}
-
 .logo {
   height: 6em;
   padding: 1.5em;

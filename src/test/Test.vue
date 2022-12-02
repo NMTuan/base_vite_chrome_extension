@@ -12,6 +12,3 @@
         test page
     </div>
 </template>
-<style>
-@unocss-placeholder html {}
-</style>
