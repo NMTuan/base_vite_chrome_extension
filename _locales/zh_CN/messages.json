@@ -1,0 +1,8 @@
+{
+    "ext_name": {
+        "message": "浏览器扩展"
+    },
+    "ext_description": {
+        "message": "一个基于 vite3 vue3 unocss 的浏览器扩展初始化模板"
+    }
+}
