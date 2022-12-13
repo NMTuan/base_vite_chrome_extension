@@ -1,7 +1,11 @@
 {
     "manifest_version": 3,
-    "name": "CRXJS Vue Vite Example",
+    "name": "__MSG_ext_name__",
     "version": "1.0.0",
+    "description": "__MSG_ext_description__",
+    "author": "NMTuan",
+    "homepage_url": "https://github.com/NMTuan/base_vite_chrome_extension",
+    "default_locale": "zh_CN",
     "action": { "default_popup": "popup.html" },
     "options_page": "options.html",
     "background": {
